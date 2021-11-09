@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DisneyCodeChallenge</string>
+    <string name="app_generic_problem">Something went wrong, Please try later</string>
+</resources>

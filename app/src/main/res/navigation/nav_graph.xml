@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/comicHubFragment">
+    <fragment
+        android:id="@+id/comicHubFragment"
+        android:name="com.example.disneycodechallenge.comic.hub.ComicHubFragment"
+        android:label="Comics">
+        <action
+            android:id="@+id/comicHubFragment_to_comicDetailFragment"
+            app:destination="@id/comicDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/comicDetailFragment"
+        android:name="com.example.disneycodechallenge.comic.detail.ComicDetailFragment"
+        android:label="Comic Detail" >
+        <argument
+            android:name="comicId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
