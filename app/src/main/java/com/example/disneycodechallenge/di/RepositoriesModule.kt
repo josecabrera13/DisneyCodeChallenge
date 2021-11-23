@@ -1,7 +1,7 @@
 package com.example.disneycodechallenge.di
 
-import com.example.disneycodechallenge.repositories.ComicRepository
-import com.example.disneycodechallenge.repositories.ComicRepositoryImpl
+import com.example.disneycodechallenge.data.ComicRepository
+import com.example.disneycodechallenge.data.ComicRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

@@ -2,8 +2,8 @@ package com.example.disneycodechallenge.comic.hub
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.disneycodechallenge.databinding.ComicItemBinding
@@ -11,7 +11,7 @@ import com.example.disneycodechallenge.models.Comic
 
 class ComicAdapter(
     private val onComicSelected: (comic: Comic?) -> Unit
-) : ListAdapter<Comic, ComicViewHolder>(ComicDiff()) {
+) : PagingDataAdapter<Comic, ComicViewHolder>(ComicDiff()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComicViewHolder =
         ComicViewHolder(
@@ -24,7 +24,10 @@ class ComicAdapter(
         )
 
     override fun onBindViewHolder(holder: ComicViewHolder, position: Int) {
-        holder.bindComic(currentList[position])
+        getItem(position)?.let {
+            holder.bindComic(it)
+        }
+
     }
 
     private class ComicDiff : DiffUtil.ItemCallback<Comic>() {
