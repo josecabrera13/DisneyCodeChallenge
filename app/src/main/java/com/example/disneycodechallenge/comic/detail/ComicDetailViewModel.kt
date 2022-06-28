@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.disneycodechallenge.models.Failure
 import com.example.disneycodechallenge.models.Success
-import com.example.disneycodechallenge.repositories.ComicRepository
+import com.example.disneycodechallenge.data.ComicRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.map
